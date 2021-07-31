@@ -45,7 +45,8 @@ class MainActivity : AppCompatActivity() {
                         val dataObj = response.getJSONObject("data")
                         val summaryObj = dataObj.getJSONObject("summary")
                         val regionalArr = dataObj.getJSONArray("regional")
-                        for (i in 0..regionalArr.length()-1 ){
+                        for (i in 0..regionalArr.length()-1 )
+                        {
                             val regionalObj = regionalArr.getJSONObject(i)
                             val state: String = regionalObj.getString("loc")
                             val active: Int = regionalObj.getInt("totalConfirmed")
